@@ -1,0 +1,77 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11/09/2017, 08:31:40 PM
+    Author     : alberto
+*/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12/09/2017, 09:42:11 AM
+    Author     : alberto
+*/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11/09/2017, 12:29:31 PM
+    Author     : alberto
+*/
+/*Mixins parametricos*/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12/09/2017, 09:41:54 AM
+    Author     : alberto
+*/
+.footertext {
+  color: #000000;
+}
+.color-footer {
+  background-color: #8c8989;
+}
+
+.caja{
+  background-color:white;
+}
+.caja:hover{
+  background-color: rgba(251, 251, 251, 0.2);
+}
+
+.banner{
+  background: url(../images/banner\ web2.jpg);
+  height: 30rem;
+  width: 100%;
+}
+
+/*nav siga a la pantalla */
+.my-fixed-item {
+  position: fixed;
+  min-height: 120px;
+  text-align: center;
+  word-wrap: break-word;
+  width: 252px;
+  background-color: aquamarine;
+}
+
+/*Bootstrap example */
+.position-fixed {
+  width: 252px;
+  min-height: 120px;
+  text-align: center;
+  background-color: aquamarine;
+}
+
+
+/*# sourceMappingURL=style.css.map */

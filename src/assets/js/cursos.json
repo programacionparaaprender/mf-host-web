@@ -1,0 +1,20 @@
+[
+    {
+        "target":"_self",
+        "class":"dropdown-item",
+        "href":"#/emprender",
+        "nombre":"Emprender por internet"
+    },
+    { 
+              "target":"_blank", 
+              "class":"dropdown-item", 
+              "href":"https://www.instagram.com/p/CK1OWPGnd3m/",
+              "nombre":"Geocercas con el lenguaje kotlin y google maps"
+            },
+            {
+                "target":"_blank",
+                "class":"dropdown-item",
+                "href":"https://www.instagram.com/p/CKrHNDmn-8s/",
+                "nombre":"Geocerca Ionic"
+            }
+]

@@ -1,0 +1,62 @@
+[
+    {
+        "nombre":"Asesoria para avanzar y crecer en las redes sociales",
+        "descripcion":"Tips y estrategias para crecer y monetizar en las redes sociales."
+    },
+    {
+        "nombre":"Instalación y configuración de servidores",
+        "descripcion":"Configuración de DNS, Directorio Activo, Impresión, Web, FTP."
+    },
+    {
+        "nombre":"Diseño y Desarrollo web",
+        "descripcion":"Diseño, desarrollo y creación de aplicaciones web."
+    },
+    {
+        "nombre":"Diseño de app para ventas online",
+        "descripcion":"Diseño, desarrollo y creación de aplicativo para ventas online, para poder vender productos por internet.",
+    },
+    {
+        "nombre":"eMarketing Digital",
+        "descripcion":"La publicidad por correo o email comercial, es enviar un mensaje comercial directamente utilizando como canal el correo electrónico. Envía a un cliente potencial anuncios, peticiones de negocios, solicitar ventas o donaciones publicidad."
+    },
+    {
+        "nombre":"Posicionamiento en buscadores",
+        "descripcion":"Posicionamiento en buscadores, optimización en motores de búsqueda o SEO, mejorar el posicionamiento de un sitio web en la lista de resultados de Google, Bing, u otros buscadores de internet."
+    },
+    {
+        "nombre":"SEO & SEM & SMM & Analítica",
+        "descripcion":"Mercadotecnia en buscadores web (SEM) promovemos el contenido digital para aumentar la visibilidad y posicionamiento en las páginas de resultados del motor de búsqueda. El posicionamiento en motores de búsqueda (SEO), móviles."
+    },
+    {
+        "nombre":"SMM",
+        "descripcion":"Social Media Marqueting (SMM) mercadotecnia viral para crear una idea, posicionar una marca, incrementar la visibilidad e incluso aumentar las ventas de productos."
+    },
+    {
+        "nombre":"Diseño Gráfico",
+        "descripcion":"Diseño y creación de logotipos, imagen corporativa, branding, diseño de impresión, rebranding, creamos diseño gráfico para aplicaciones web."
+    },
+    {
+        "nombre":"Diseño y Desarrollo Aplicativos Móviles",
+        "descripcion":"Diseño, desarrollo y creación de aplicaciones móviles para Android."
+    },
+    {
+        "nombre":"Mantenimiento y gestión de aplicaciones",
+        "descripcion":"Servicio, soporte y mantenimiento  de escritorio, móviles y web."
+    },
+    {
+        "nombre":"Alojamiento web",
+        "descripcion":"Alojamiento web (hosting) para poder almacenar información, imágenes, vídeo, o cualquier contenido accesible vía web."
+    },
+    {
+        "nombre":"Diseño responsive",
+        "descripcion":"Adaptable a todas las pantallas: pc, laptop, tabletas y smartphone."
+    },
+    {
+        "nombre":"Certificado SSL",
+        "descripcion":"Tus usuarios pueden navegar de manera segura."
+    },
+    {
+        "nombre":"Redes sociales",
+        "descripcion":"Integración a redes sociales y botón de whatsapp."
+    }
+]

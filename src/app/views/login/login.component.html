@@ -1,0 +1,56 @@
+<div class="d-flex align-items-center justify-content-center vh-100 bg-light">
+  <div class="card shadow-lg p-4" style="width: 100%; max-width: 400px;">
+    <div class="text-center mb-3">
+      <h3 class="fw-bold text-primary">Iniciar Sesión</h3>
+    </div>
+
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <div class="mb-3">
+        <label for="username" class="form-label">Usuario</label>
+        <input
+          id="username"
+          type="text"
+          class="form-control"
+          formControlName="username"
+          placeholder="Tu usuario"
+        />
+        <div
+          *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched"
+          class="text-danger small"
+        >
+          El usuario es obligatorio.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Contraseña</label>
+        <input
+          id="password"
+          type="password"
+          class="form-control"
+          formControlName="password"
+          placeholder="Tu contraseña"
+        />
+        <div
+          *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched"
+          class="text-danger small"
+        >
+          La contraseña es obligatoria.
+        </div>
+      </div>
+
+      <button
+        class="btn btn-primary w-100"
+        type="submit"
+        [disabled]="loading || loginForm.invalid"
+      >
+        <span *ngIf="!loading">Ingresar</span>
+        <span *ngIf="loading" class="spinner-border spinner-border-sm"></span>
+      </button>
+    </form>
+
+    <div class="text-center mt-3">
+      <p class="text-muted small">{{ mensaje }}</p>
+    </div>
+  </div>
+</div>
