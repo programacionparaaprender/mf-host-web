@@ -1,22 +1,10 @@
 # Componente1
 
 ### datos
-https://auth0.com/ 
-luis13711@hotmail.com 
-Buenaboca1820 
-domain 
-dev-jo4bnf180oat65tp.us.auth0.com 
-client id 
-4Rs8Pb4jswYC6AFCNTzq8Lt0N9tVHQqj 
-client secret 
-DVhdrYuTnNV_s7IVyuSHb8mWs9w5Ydsa_OKiE73K__0MeC1j_D3zVx8oHkiW4DNO 
-lcorrea@deltasac.com.pe 
-Ejemplo2356 
-alberto13711@gmail.com 
-Ejemplo2356 
+
 
 ###
->- ng new mf-host-web --no-standalone
+>- ng new mf-host --no-standalone
 >- npm install -D @angular-architects/module-federation
 >- ng add @angular-architects/module-federation --project mf-remote --port 4200 --type host
 
@@ -52,10 +40,14 @@ Configurar cors en permisos
   } 
 ] 
 >- npm run build
->- aws s3 sync dist/mf-host-web/ s3://mf-host-web 
+>- aws s3 sync dist/mf-host/ s3://mf-host 
 
 ### comandos aws s3 despliegue en bucket compartido
->- aws s3 sync dist/mf-host-web s3://mf-host-web-and-remote/
+>- aws s3 sync dist/mf-host s3://mf-host-and-remote/
+
+### actualizar versión de angular
+>- ng update @angular/cli@19 @angular/core@19
+>- ng update @angular/cli@20 @angular/core@20
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.4.

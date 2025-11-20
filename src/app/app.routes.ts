@@ -5,14 +5,24 @@ import { ComponenteLocalComponent } from './views/componente-local/componente-lo
 import { Routes } from '@angular/router';
 import { AuthLoginGuard } from './services/auth-login.guard';
 import { PrincipalComponent } from './views/principal/principal.component';
+import { ProfileComponent } from './views/profile/profile.component';
 import { LoginComponent } from './views/login/login.component';
 
 
 export const routes: Routes = [
     { 
-      path: '',  redirectTo: '/principal', pathMatch: 'full' },
+      path: '',  redirectTo: '/principal', pathMatch: 'full' 
+    },
     { 
-      //canActivate: [AuthLoginGuard], // 👈 redirige al login si no está autenticado
+      canActivate: [AuthLoginGuard], // 👈 redirige al login si no está autenticado
+      path: 'profile' , component: ProfileComponent
+    },
+    { 
+      canActivate: [AuthLoginGuard], // 👈 redirige al login si no está autenticado
+      path: 'local' , component: ComponenteLocalComponent
+    },
+    { 
+      canActivate: [AuthLoginGuard], // 👈 redirige al login si no está autenticado
       path: 'principal' , component: PrincipalComponent,
       // ✅ Hijas del componente Principal
       children: [
@@ -26,7 +36,7 @@ export const routes: Routes = [
               type: 'module',
               remoteEntry: 'http://localhost:4201/remoteEntry.js',
               //remoteEntry: 'http://mf-remoto.s3-website.us-east-2.amazonaws.com/remoteEntry.js',
-              //remoteEntry: 'http://mf-host-web-and-remote.s3-website.us-east-2.amazonaws.com/mf-remoto/remoteEntry.js',
+              //remoteEntry: 'http://mf-host-and-remote.s3-website.us-east-2.amazonaws.com/mf-remoto/remoteEntry.js',
               exposedModule: './RemotoComponent',
             }).then((m) => m.RemotoComponent),
         },
@@ -41,14 +51,14 @@ export const routes: Routes = [
       path: 'registro' , component: ComponenteLocalComponent
     },
     {
-      //canActivate: [AuthLoginGuard], // 👈 redirige al login si no está autenticado
+      canActivate: [AuthLoginGuard], // 👈 redirige al login si no está autenticado
       path: 'remoto',
       loadComponent: () =>
         loadRemoteModule({
           type: 'module',
           remoteEntry: 'http://localhost:4201/remoteEntry.js',
           //remoteEntry: 'http://mf-remoto.s3-website.us-east-2.amazonaws.com/remoteEntry.js',
-          //remoteEntry: 'http://mf-host-web-and-remote.s3-website.us-east-2.amazonaws.com/mf-remoto/remoteEntry.js',
+          //remoteEntry: 'http://mf-host-and-remote.s3-website.us-east-2.amazonaws.com/mf-remoto/remoteEntry.js',
           exposedModule: './RemotoComponent',
         }).then((m) => m.RemotoComponent),
     },
@@ -59,7 +69,7 @@ export const routes: Routes = [
           type: 'module',
           remoteEntry: 'http://localhost:4202/remoteEntry.js',
           //remoteEntry: 'http://mf-remoto.s3-website.us-east-2.amazonaws.com/remoteEntry.js',
-          //remoteEntry: 'http://mf-host-web-and-remote.s3-website.us-east-2.amazonaws.com/mf-remoto/remoteEntry.js',
+          //remoteEntry: 'http://mf-host-and-remote.s3-website.us-east-2.amazonaws.com/mf-remoto/remoteEntry.js',
           exposedModule: './RemotoComponent',
         }).then((m) => m.RemotoComponent),
     }*/

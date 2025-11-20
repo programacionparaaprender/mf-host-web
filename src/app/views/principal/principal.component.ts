@@ -12,7 +12,7 @@ import { ComponenteLocalComponent } from "../componente-local/componente-local.c
 @Component({
   standalone:true,
   selector: 'app-principal',
-    imports:[
+  imports:[
       RouterOutlet,
       MenuComponent,
       SidebarComponent,
