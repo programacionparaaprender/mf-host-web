@@ -40,6 +40,16 @@ export const routes: Routes = [
               exposedModule: './RemotoComponent',
             }).then((m) => m.RemotoComponent),
         },
+        {
+          //canActivate: [AuthLoginGuard], // 👈 redirige al login si no está autenticado
+          path: 'vieja',
+          loadComponent: () =>
+            loadRemoteModule({
+              type: 'module',
+              remoteEntry: 'http://localhost:4201/remoteEntry.js',
+              exposedModule: './ViejaComponent',
+            }).then((m) => m.ViejaComponent),
+        },
       ],
     },
     { 

@@ -1,0 +1,1710 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>mf-host-auth0 documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+          <script>
+              // --- Iframe navigation tracking for Template Playground ---
+              function sendCurrentUrlToParent() {
+                  if (window.parent && window.parent !== window) {
+                      window.parent.postMessage({
+                          type: 'compodoc-iframe-navigate',
+                          url: window.location.pathname + window.location.hash
+                      }, '*');
+                  }
+              }
+              window.addEventListener('hashchange', sendCurrentUrlToParent, false);
+              window.addEventListener('popstate', sendCurrentUrlToParent, false);
+              window.addEventListener('DOMContentLoaded', sendCurrentUrlToParent, false);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">mf-host-auth0 documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content miscellaneous-variables">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Miscellaneous</li>
+  <li class="breadcrumb-item">Variables</li>
+</ol>
+
+<section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <ul class="index-list">
+                        <li>
+                            <a href="#_counterReducer" title="src/app/store/counter/counter.reducer.ts" ><b>_counterReducer</b>&nbsp;&nbsp;&nbsp;(src/.../counter.reducer.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#_exampleReducer" title="src/app/store/example/example.reducer.ts" ><b>_exampleReducer</b>&nbsp;&nbsp;&nbsp;(src/.../example.reducer.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#_userReducer" title="src/app/store/users/users.reducer.ts" ><b>_userReducer</b>&nbsp;&nbsp;&nbsp;(src/.../users.reducer.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#addProducts" title="src/app/store/product/product.actions.ts" ><b>addProducts</b>&nbsp;&nbsp;&nbsp;(src/.../product.actions.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#addProductsFailure" title="src/app/store/product/product.actions.ts" ><b>addProductsFailure</b>&nbsp;&nbsp;&nbsp;(src/.../product.actions.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#addProductsSuccess" title="src/app/store/product/product.actions.ts" ><b>addProductsSuccess</b>&nbsp;&nbsp;&nbsp;(src/.../product.actions.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#appConfig" title="src/app/app.config.ts" ><b>appConfig</b>&nbsp;&nbsp;&nbsp;(src/.../app.config.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#AuthLoginGuard" title="src/app/services/auth-login.guard.ts" ><b>AuthLoginGuard</b>&nbsp;&nbsp;&nbsp;(src/.../auth-login.guard.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#clientId" title="src/environments/environment.ts" ><b>clientId</b>&nbsp;&nbsp;&nbsp;(src/.../environment.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#counterAction" title="src/app/store/counter/counter.actions.ts" ><b>counterAction</b>&nbsp;&nbsp;&nbsp;(src/.../counter.actions.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#decrement" title="src/app/store/counter/counter.actions.ts" ><b>decrement</b>&nbsp;&nbsp;&nbsp;(src/.../counter.actions.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#domain" title="src/environments/environment.ts" ><b>domain</b>&nbsp;&nbsp;&nbsp;(src/.../environment.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#environment" title="src/environments/environment.prod.ts" ><b>environment</b>&nbsp;&nbsp;&nbsp;(src/.../environment.prod.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#environment" title="src/environments/environment.ts" ><b>environment</b>&nbsp;&nbsp;&nbsp;(src/.../environment.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#increment" title="src/app/store/counter/counter.actions.ts" ><b>increment</b>&nbsp;&nbsp;&nbsp;(src/.../counter.actions.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#incrementFailure" title="src/app/store/counter/counter.actions.ts" ><b>incrementFailure</b>&nbsp;&nbsp;&nbsp;(src/.../counter.actions.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#incrementSuccess" title="src/app/store/counter/counter.actions.ts" ><b>incrementSuccess</b>&nbsp;&nbsp;&nbsp;(src/.../counter.actions.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#initialCounterState" title="src/app/store/counter/counter.reducer.ts" ><b>initialCounterState</b>&nbsp;&nbsp;&nbsp;(src/.../counter.reducer.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#initialExampleState" title="src/app/store/example/example.reducer.ts" ><b>initialExampleState</b>&nbsp;&nbsp;&nbsp;(src/.../example.reducer.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#initialState" title="src/app/store/app.state.ts" ><b>initialState</b>&nbsp;&nbsp;&nbsp;(src/.../app.state.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#initialStateProducts" title="src/app/store/product/product.reducer.ts" ><b>initialStateProducts</b>&nbsp;&nbsp;&nbsp;(src/.../product.reducer.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#initialUserState" title="src/app/store/users/users.reducer.ts" ><b>initialUserState</b>&nbsp;&nbsp;&nbsp;(src/.../users.reducer.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#loadProducts" title="src/app/store/product/product.actions.ts" ><b>loadProducts</b>&nbsp;&nbsp;&nbsp;(src/.../product.actions.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#loadProductsFailure" title="src/app/store/product/product.actions.ts" ><b>loadProductsFailure</b>&nbsp;&nbsp;&nbsp;(src/.../product.actions.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#loadProductsSuccess" title="src/app/store/product/product.actions.ts" ><b>loadProductsSuccess</b>&nbsp;&nbsp;&nbsp;(src/.../product.actions.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#metaReducers" title="src/app/app.config.ts" ><b>metaReducers</b>&nbsp;&nbsp;&nbsp;(src/.../app.config.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#productReducer" title="src/app/store/product/product.reducer.ts" ><b>productReducer</b>&nbsp;&nbsp;&nbsp;(src/.../product.reducer.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#products" title="src/app/infraestructure/repositories/products/product.repository.ts" ><b>products</b>&nbsp;&nbsp;&nbsp;(src/.../product.repository.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#reset" title="src/app/store/counter/counter.actions.ts" ><b>reset</b>&nbsp;&nbsp;&nbsp;(src/.../counter.actions.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#resetAction" title="src/app/store/example/example.actions.ts" ><b>resetAction</b>&nbsp;&nbsp;&nbsp;(src/.../example.actions.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#resetAction" title="src/app/store/product/product.actions.ts" ><b>resetAction</b>&nbsp;&nbsp;&nbsp;(src/.../product.actions.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#resetAction" title="src/app/store/users/users.actions.ts" ><b>resetAction</b>&nbsp;&nbsp;&nbsp;(src/.../users.actions.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#selectAllProducts" title="src/app/store/product/product.selector.ts" ><b>selectAllProducts</b>&nbsp;&nbsp;&nbsp;(src/.../product.selector.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#selectAllUsers" title="src/app/store/users/users.selectors.ts" ><b>selectAllUsers</b>&nbsp;&nbsp;&nbsp;(src/.../users.selectors.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#selectCounterState" title="src/app/store/counter/counter.selectors.ts" ><b>selectCounterState</b>&nbsp;&nbsp;&nbsp;(src/.../counter.selectors.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#selectCounterValue" title="src/app/store/counter/counter.selectors.ts" ><b>selectCounterValue</b>&nbsp;&nbsp;&nbsp;(src/.../counter.selectors.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#selectExampleState" title="src/app/store/example/example.selectors.ts" ><b>selectExampleState</b>&nbsp;&nbsp;&nbsp;(src/.../example.selectors.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#selectLoading" title="src/app/store/product/product.selector.ts" ><b>selectLoading</b>&nbsp;&nbsp;&nbsp;(src/.../product.selector.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#selectProductsState" title="src/app/store/product/product.selector.ts" ><b>selectProductsState</b>&nbsp;&nbsp;&nbsp;(src/.../product.selector.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#selectSomeValue" title="src/app/store/example/example.selectors.ts" ><b>selectSomeValue</b>&nbsp;&nbsp;&nbsp;(src/.../example.selectors.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#selectUserState" title="src/app/store/users/users.selectors.ts" ><b>selectUserState</b>&nbsp;&nbsp;&nbsp;(src/.../users.selectors.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#someAction" title="src/app/store/example/example.actions.ts" ><b>someAction</b>&nbsp;&nbsp;&nbsp;(src/.../example.actions.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#someAction" title="src/app/store/users/users.actions.ts" ><b>someAction</b>&nbsp;&nbsp;&nbsp;(src/.../users.actions.ts)</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    <h3>src/app/store/counter/counter.reducer.ts</h3>
+    <section data-compodoc="block-properties">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_counterReducer"></a>
+                    <span class="name">
+                        <span ><b>_counterReducer</b></span>
+                        <a href="#_counterReducer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>unknown</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>createReducer(
+  initialCounterState,
+  on(ExampleActions.counterAction, (state, { payload }) &#x3D;&gt; ({
+    ...state,
+    counterValue: payload,
+  })),
+  on(increment, (state) &#x3D;&gt; ({
+    ...state,
+    counterValue: state.counterValue + 1,
+  })),
+  on(incrementSuccess, (state, {counters}) &#x3D;&gt; ({
+    ...state,
+    counterValue: counters + 1,
+  })),
+  on(incrementFailure, (state:any, { error }) &#x3D;&gt; ({
+    ...state,
+  })),
+  on(decrement, (state) &#x3D;&gt; ({
+    ...state,
+    counterValue: state.counterValue - 1,
+  })),
+  on(reset, (state) &#x3D;&gt; ({
+    ...state,
+    counterValue: 0,
+  }))
+)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initialCounterState"></a>
+                    <span class="name">
+                        <span ><b>initialCounterState</b></span>
+                        <a href="#initialCounterState"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/CounterState.html" target="_self" >CounterState</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+  counterValue: 0,
+}</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/store/example/example.reducer.ts</h3>
+    <section data-compodoc="block-properties">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_exampleReducer"></a>
+                    <span class="name">
+                        <span ><b>_exampleReducer</b></span>
+                        <a href="#_exampleReducer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>unknown</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>createReducer(
+  initialExampleState,
+  on(ExampleActions.someAction, (state, { payload }) &#x3D;&gt; ({
+    ...state,
+    someValue: payload,
+  })),
+  on(ExampleActions.resetAction, (state) &#x3D;&gt; ({
+    ...state,
+    someValue: &#x27;&#x27;,
+  })),
+)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initialExampleState"></a>
+                    <span class="name">
+                        <span ><b>initialExampleState</b></span>
+                        <a href="#initialExampleState"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/ExampleState.html" target="_self" >ExampleState</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+  someValue: &#x27;&#x27;,
+}</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/store/users/users.reducer.ts</h3>
+    <section data-compodoc="block-properties">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_userReducer"></a>
+                    <span class="name">
+                        <span ><b>_userReducer</b></span>
+                        <a href="#_userReducer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>unknown</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>createReducer(
+  initialUserState,
+  on(ExampleActions.someAction, (state:any, { payload }) &#x3D;&gt; ({
+    ...state,
+    userList:[...state.userList, payload],
+  })),
+  on(ExampleActions.resetAction, (state) &#x3D;&gt; ({
+    ...state,
+    userList: [],
+  })),
+)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initialUserState"></a>
+                    <span class="name">
+                        <span ><b>initialUserState</b></span>
+                        <a href="#initialUserState"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/UserState.html" target="_self" >UserState</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+  userList: [],
+}</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/store/product/product.actions.ts</h3>
+    <section data-compodoc="block-properties">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addProducts"></a>
+                    <span class="name">
+                        <span ><b>addProducts</b></span>
+                        <a href="#addProducts"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>unknown</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>createAction(&#x27;[Products] add Products&#x27;,
+  props&lt;{ product: ProductDto }&gt;()
+)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addProductsFailure"></a>
+                    <span class="name">
+                        <span ><b>addProductsFailure</b></span>
+                        <a href="#addProductsFailure"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>unknown</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>createAction(
+  &#x27;[Products] add Products Failure&#x27;,
+  props&lt;{ error: any }&gt;()
+)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addProductsSuccess"></a>
+                    <span class="name">
+                        <span ><b>addProductsSuccess</b></span>
+                        <a href="#addProductsSuccess"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>unknown</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>createAction(
+  &#x27;[Products] add Products Success&#x27;,
+  props&lt;{ product: ProductDto }&gt;()
+)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadProducts"></a>
+                    <span class="name">
+                        <span ><b>loadProducts</b></span>
+                        <a href="#loadProducts"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>unknown</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>createAction(&#x27;[Products] Load Products&#x27;)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadProductsFailure"></a>
+                    <span class="name">
+                        <span ><b>loadProductsFailure</b></span>
+                        <a href="#loadProductsFailure"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>unknown</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>createAction(
+  &#x27;[Products] Load Products Failure&#x27;,
+  props&lt;{ error: any }&gt;()
+)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadProductsSuccess"></a>
+                    <span class="name">
+                        <span ><b>loadProductsSuccess</b></span>
+                        <a href="#loadProductsSuccess"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>unknown</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>createAction(
+  &#x27;[Products] Load Products Success&#x27;,
+  props&lt;{ products: any[] }&gt;()
+)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="resetAction"></a>
+                    <span class="name">
+                        <span ><b>resetAction</b></span>
+                        <a href="#resetAction"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>unknown</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>createAction(&#x27;[Products] Some Action Reset&#x27;)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/app.config.ts</h3>
+    <section data-compodoc="block-properties">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="appConfig"></a>
+                    <span class="name">
+                        <span ><b>appConfig</b></span>
+                        <a href="#appConfig"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../components/App.html" target="_self" >ApplicationConfig</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+  providers: [
+    provideHttpClient(),
+    provideZoneChangeDetection({ eventCoalescing: true }), 
+    provideRouter(routes),
+    importProvidersFrom(
+      AuthModule.forRoot({
+        domain: environment.AUTH0.DOMAIN,
+        clientId: environment.AUTH0.CLIENTID,
+        cacheLocation:&#x27;localstorage&#x27;,
+        authorizationParams: {
+          redirect_uri: window.location.origin
+        }
+      })
+    ),
+    provideStore(
+      {
+        exampleState: exampleReducer,
+        counterState: counterReducer,
+        productState: productReducer,
+        userState: userReducer,
+      },
+      { metaReducers }
+    ),
+    provideStoreDevtools({
+      maxAge: 25,
+      logOnly: environment.production,
+    }),
+    //provideEffects([ProductEffects]),
+    provideTranslateService({
+      lang: &#x27;en&#x27;,
+      fallbackLang: &#x27;en&#x27;,
+      loader: provideTranslateHttpLoader({
+        prefix: &#x27;/i18n/&#x27;,
+        suffix: &#x27;.json&#x27;
+      })
+    }),
+  ]
+}</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="metaReducers"></a>
+                    <span class="name">
+                        <span ><b>metaReducers</b></span>
+                        <a href="#metaReducers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Array&lt;MetaReducer&lt;any, any&gt;&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[localStorageSyncReducer]</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/services/auth-login.guard.ts</h3>
+    <section data-compodoc="block-properties">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="AuthLoginGuard"></a>
+                    <span class="name">
+                        <span ><b>AuthLoginGuard</b></span>
+                        <a href="#AuthLoginGuard"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>CanActivateFn</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>() &#x3D;&gt; {
+  const auth &#x3D; inject(AuthService);
+
+  return auth.isAuthenticated$.pipe(
+    tap((loggedIn) &#x3D;&gt; {
+      if (!loggedIn) {
+        auth.loginWithRedirect({
+          appState: { target: &#x27;/&#x27; } // redirige aquí tras login
+        });
+      }
+    })
+  );
+}</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/environments/environment.ts</h3>
+    <section data-compodoc="block-properties">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="clientId"></a>
+                    <span class="name">
+                        <span ><b>clientId</b></span>
+                        <a href="#clientId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="domain"></a>
+                    <span class="name">
+                        <span ><b>domain</b></span>
+                        <a href="#domain"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="environment"></a>
+                    <span class="name">
+                        <span ><b>environment</b></span>
+                        <a href="#environment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+  production: false,
+  AUTH0:{
+    DOMAIN: domain,
+    CLIENTID: clientId
+  }
+}</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/store/counter/counter.actions.ts</h3>
+    <section data-compodoc="block-properties">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="counterAction"></a>
+                    <span class="name">
+                        <span ><b>counterAction</b></span>
+                        <a href="#counterAction"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>unknown</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>createAction(
+  &#x27;[Example] Counter Action&#x27;,
+  props&lt;{ payload: number }&gt;(),
+)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="decrement"></a>
+                    <span class="name">
+                        <span ><b>decrement</b></span>
+                        <a href="#decrement"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>unknown</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>createAction(&#x27;[Counter Component] Decrement&#x27;)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="increment"></a>
+                    <span class="name">
+                        <span ><b>increment</b></span>
+                        <a href="#increment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>unknown</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>createAction(&#x27;[Counter Component] Increment&#x27;)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="incrementFailure"></a>
+                    <span class="name">
+                        <span ><b>incrementFailure</b></span>
+                        <a href="#incrementFailure"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>unknown</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>createAction(
+  &#x27;[Counter Component] Increment Failure&#x27;,
+  props&lt;{ error: any }&gt;()
+)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="incrementSuccess"></a>
+                    <span class="name">
+                        <span ><b>incrementSuccess</b></span>
+                        <a href="#incrementSuccess"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>unknown</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>createAction(
+  &#x27;[Counter Component] Increment Success&#x27;,
+  props&lt;{ counters: number }&gt;()
+)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="reset"></a>
+                    <span class="name">
+                        <span ><b>reset</b></span>
+                        <a href="#reset"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>unknown</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>createAction(&#x27;[Counter Component] Reset&#x27;)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/environments/environment.prod.ts</h3>
+    <section data-compodoc="block-properties">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="environment"></a>
+                    <span class="name">
+                        <span ><b>environment</b></span>
+                        <a href="#environment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+  production: true
+}</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/store/app.state.ts</h3>
+    <section data-compodoc="block-properties">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initialState"></a>
+                    <span class="name">
+                        <span ><b>initialState</b></span>
+                        <a href="#initialState"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/AppState.html" target="_self" >AppState</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+  exampleState: initialExampleState,
+  counterState: initialCounterState,
+  productState: initialStateProducts,
+  userState: initialUserState
+}</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/store/product/product.reducer.ts</h3>
+    <section data-compodoc="block-properties">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initialStateProducts"></a>
+                    <span class="name">
+                        <span ><b>initialStateProducts</b></span>
+                        <a href="#initialStateProducts"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/ProductState.html" target="_self" >ProductState</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+  productsList: [],
+  loading: false,
+}</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="productReducer"></a>
+                    <span class="name">
+                        <span ><b>productReducer</b></span>
+                        <a href="#productReducer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>unknown</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>createReducer(
+  initialStateProducts,
+  on(resetAction, (state) &#x3D;&gt; ({
+    ...state,
+    loading: false,
+    productsList: [],
+  })),
+  on(addProducts, (state:any) &#x3D;&gt; ({
+    ...state,
+    loading: true,
+  })),
+  on(addProductsSuccess, (state:any, { product }) &#x3D;&gt; ({
+    ...state,
+    loading: false,
+    productsList: [...state.productsList, product],
+  })),
+  on(loadProductsSuccess, (state:any, { products }) &#x3D;&gt; ({
+    ...state,
+    productsList: products,
+    loading: false,
+  })),
+  on(loadProductsFailure, (state:any, { error }) &#x3D;&gt; ({
+    ...state,
+    loading: false,
+  }))
+)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/infraestructure/repositories/products/product.repository.ts</h3>
+    <section data-compodoc="block-properties">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="products"></a>
+                    <span class="name">
+                        <span ><b>products</b></span>
+                        <a href="#products"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    {
+        name:&#x27;Product 1&#x27;,
+        description: &#x27;Description 1&#x27;,
+        amount: 100
+    },
+    {
+        name:&#x27;Product 2&#x27;,
+        description: &#x27;Description 2&#x27;,
+        amount: 100
+    }
+]</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/store/example/example.actions.ts</h3>
+    <section data-compodoc="block-properties">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="resetAction"></a>
+                    <span class="name">
+                        <span ><b>resetAction</b></span>
+                        <a href="#resetAction"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>unknown</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>createAction(&#x27;[Example] Some Action Reset&#x27;)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="someAction"></a>
+                    <span class="name">
+                        <span ><b>someAction</b></span>
+                        <a href="#someAction"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>unknown</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>createAction(
+  &#x27;[Example] Some Action&#x27;,
+  props&lt;{ payload: string }&gt;(),
+)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/store/users/users.actions.ts</h3>
+    <section data-compodoc="block-properties">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="resetAction"></a>
+                    <span class="name">
+                        <span ><b>resetAction</b></span>
+                        <a href="#resetAction"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>unknown</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>createAction(&#x27;[Users] Action Reset&#x27;)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="someAction"></a>
+                    <span class="name">
+                        <span ><b>someAction</b></span>
+                        <a href="#someAction"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>unknown</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>createAction(
+  &#x27;[Users] Action Add&#x27;,
+  props&lt;{ payload: UserStore }&gt;(),
+)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/store/product/product.selector.ts</h3>
+    <section data-compodoc="block-properties">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectAllProducts"></a>
+                    <span class="name">
+                        <span ><b>selectAllProducts</b></span>
+                        <a href="#selectAllProducts"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>unknown</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>createSelector(
+  selectProductsState,
+  (state) &#x3D;&gt; state.productsList
+)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectLoading"></a>
+                    <span class="name">
+                        <span ><b>selectLoading</b></span>
+                        <a href="#selectLoading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>unknown</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>createSelector(
+  selectProductsState,
+  (state) &#x3D;&gt; state.loading
+)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectProductsState"></a>
+                    <span class="name">
+                        <span ><b>selectProductsState</b></span>
+                        <a href="#selectProductsState"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>unknown</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>createFeatureSelector&lt;ProductState&gt;(&#x27;productState&#x27;)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/store/users/users.selectors.ts</h3>
+    <section data-compodoc="block-properties">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectAllUsers"></a>
+                    <span class="name">
+                        <span ><b>selectAllUsers</b></span>
+                        <a href="#selectAllUsers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>unknown</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>createSelector(
+  selectUserState,
+  (state: UserState) &#x3D;&gt; state.userList
+)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectUserState"></a>
+                    <span class="name">
+                        <span ><b>selectUserState</b></span>
+                        <a href="#selectUserState"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>unknown</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>createFeatureSelector&lt;UserState&gt;(&#x27;userState&#x27;)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/store/counter/counter.selectors.ts</h3>
+    <section data-compodoc="block-properties">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectCounterState"></a>
+                    <span class="name">
+                        <span ><b>selectCounterState</b></span>
+                        <a href="#selectCounterState"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>unknown</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>createFeatureSelector&lt;CounterState&gt;(&#x27;counterState&#x27;)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectCounterValue"></a>
+                    <span class="name">
+                        <span ><b>selectCounterValue</b></span>
+                        <a href="#selectCounterValue"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>unknown</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>createSelector(
+  selectCounterState,
+  (state: CounterState) &#x3D;&gt; state.counterValue,
+)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/store/example/example.selectors.ts</h3>
+    <section data-compodoc="block-properties">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectExampleState"></a>
+                    <span class="name">
+                        <span ><b>selectExampleState</b></span>
+                        <a href="#selectExampleState"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>unknown</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>createFeatureSelector&lt;ExampleState&gt;(&#x27;exampleState&#x27;)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectSomeValue"></a>
+                    <span class="name">
+                        <span ><b>selectSomeValue</b></span>
+                        <a href="#selectSomeValue"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>unknown</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>createSelector(
+  selectExampleState,
+  (state: ExampleState) &#x3D;&gt; state.someValue,
+)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'miscellaneous-variables';
+            var COMPODOC_CURRENT_PAGE_URL = 'variables.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

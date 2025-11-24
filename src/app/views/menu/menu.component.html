@@ -36,6 +36,11 @@
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" [routerLink]="'/principal/vieja'">
+              {{ 'vieja' | translate }}
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" (click)="logout()">
               {{ 'logout' | translate }}
             </a>
