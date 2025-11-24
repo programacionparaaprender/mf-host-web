@@ -15,9 +15,7 @@ import { ComponenteLocalComponent } from "../componente-local/componente-local.c
   imports:[
       RouterOutlet,
       MenuComponent,
-      SidebarComponent,
-      FooterComponent,
-      ComponenteLocalComponent],
+      SidebarComponent],
   templateUrl: './principal.component.html',
   styleUrls: ['./principal.component.css']
 })

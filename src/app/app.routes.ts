@@ -14,15 +14,15 @@ export const routes: Routes = [
       path: '',  redirectTo: '/principal', pathMatch: 'full' 
     },
     { 
-      canActivate: [AuthLoginGuard], // 👈 redirige al login si no está autenticado
+      //canActivate: [AuthLoginGuard], // 👈 redirige al login si no está autenticado
       path: 'profile' , component: ProfileComponent
     },
     { 
-      canActivate: [AuthLoginGuard], // 👈 redirige al login si no está autenticado
+      //canActivate: [AuthLoginGuard], // 👈 redirige al login si no está autenticado
       path: 'local' , component: ComponenteLocalComponent
     },
     { 
-      canActivate: [AuthLoginGuard], // 👈 redirige al login si no está autenticado
+      //canActivate: [AuthLoginGuard], // 👈 redirige al login si no está autenticado
       path: 'principal' , component: PrincipalComponent,
       // ✅ Hijas del componente Principal
       children: [

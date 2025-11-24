@@ -16,19 +16,17 @@
       <li>
         <button type="button" id="bcomp" (click)="clickMenuPadre('bcomp', '/principal/local')">
           <i class="ai-home-alt1"></i>
-          <p class="etexto">Componente local</p>
+          <p class="etexto">
+            {{ 'Componente_local' | translate }}
+          </p>
         </button>
       </li>
       <li>
         <button type="button" id="bremo" (click)="clickMenuPadre('bremo', '/principal/remoto')">
           <i class="ai-dashboard"></i>
-          <p class="etexto">Componente remoto</p>
-        </button>
-      </li>
-      <li>
-        <button type="button" id="blogin" (click)="clickMenuPadre('blogin', '/principal/login')">
-          <i class="ai-dashboard"></i>
-          <p class="etexto">Componente login</p>
+          <p class="etexto">
+            {{ 'Componente_remoto' | translate }}
+          </p>
         </button>
       </li>
 <!--      <li>

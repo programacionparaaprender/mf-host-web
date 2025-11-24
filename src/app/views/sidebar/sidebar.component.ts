@@ -1,6 +1,8 @@
+import { UpperCasePipe } from "@angular/common";
 import { Component, OnInit } from "@angular/core";
 //import { LatLng, LatLngLiteral, PolyMouseEvent } from '../services/google-maps-types';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { TranslatePipe } from "@ngx-translate/core";
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -8,6 +10,10 @@ import { map } from 'rxjs/operators';
 @Component({
   standalone:true,
   selector: 'app-sidebar',
+  imports:[
+    RouterModule,
+    TranslatePipe
+  ],
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css']
 })
