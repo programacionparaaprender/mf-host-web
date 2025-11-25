@@ -34,9 +34,10 @@ export const routes: Routes = [
           loadComponent: () =>
             loadRemoteModule({
               type: 'module',
-              remoteEntry: 'http://localhost:4201/remoteEntry.js',
+              //remoteEntry: 'http://localhost:4201/remoteEntry.js',
               //remoteEntry: 'http://mf-remoto.s3-website.us-east-2.amazonaws.com/remoteEntry.js',
               //remoteEntry: 'http://mf-host-and-remote.s3-website.us-east-2.amazonaws.com/mf-remoto/remoteEntry.js',
+              remoteEntry: 'https://6925c5b4a0cd3e00083e7287--mf-remoto.netlify.app/remoteEntry.js',
               exposedModule: './RemotoComponent',
             }).then((m) => m.RemotoComponent),
         },
@@ -46,7 +47,8 @@ export const routes: Routes = [
           loadComponent: () =>
             loadRemoteModule({
               type: 'module',
-              remoteEntry: 'http://localhost:4201/remoteEntry.js',
+              //remoteEntry: 'http://localhost:4201/remoteEntry.js',
+              remoteEntry: 'https://6925c5b4a0cd3e00083e7287--mf-remoto.netlify.app/remoteEntry.js',
               exposedModule: './ViejaComponent',
             }).then((m) => m.ViejaComponent),
         },
