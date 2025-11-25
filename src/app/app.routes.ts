@@ -55,34 +55,9 @@ export const routes: Routes = [
       ],
     },
     { 
-      //canActivate: [AuthLoginGuard], // 👈 redirige al login si no está autenticado
       path: 'login' , component: LoginComponent
     },
     { 
-      //canActivate: [AuthLoginGuard], // 👈 redirige al login si no está autenticado
       path: 'registro' , component: ComponenteLocalComponent
     },
-    {
-      canActivate: [AuthLoginGuard], // 👈 redirige al login si no está autenticado
-      path: 'remoto',
-      loadComponent: () =>
-        loadRemoteModule({
-          type: 'module',
-          remoteEntry: 'http://localhost:4201/remoteEntry.js',
-          //remoteEntry: 'http://mf-remoto.s3-website.us-east-2.amazonaws.com/remoteEntry.js',
-          //remoteEntry: 'http://mf-host-and-remote.s3-website.us-east-2.amazonaws.com/mf-remoto/remoteEntry.js',
-          exposedModule: './RemotoComponent',
-        }).then((m) => m.RemotoComponent),
-    },
-    /*{
-      path: 'login',
-      loadComponent: () =>
-        loadRemoteModule({
-          type: 'module',
-          remoteEntry: 'http://localhost:4202/remoteEntry.js',
-          //remoteEntry: 'http://mf-remoto.s3-website.us-east-2.amazonaws.com/remoteEntry.js',
-          //remoteEntry: 'http://mf-host-and-remote.s3-website.us-east-2.amazonaws.com/mf-remoto/remoteEntry.js',
-          exposedModule: './RemotoComponent',
-        }).then((m) => m.RemotoComponent),
-    }*/
 ];
